@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.stopwtach-parent {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(204, 204, 204, 0.26);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stopwtach-parent .container {
+  width: 100%;
+}
+.stopwtach-parent .watch-inerface {
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #c5ffec;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.19);
+  color: #000;
+  border-radius: 50%;
+}
+.stopwtach-parent .watch-inerface .time-check {
+  margin-bottom: 30px;
+}
+.stopwtach-parent .watch-inerface .time-check span {
+  width: 40px;
+  display: inline-block;
+  text-align: center;
+}
+.stopwtach-parent .watch-inerface .controls {
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+.stopwtach-parent .watch-inerface .controls span {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  margin: 0 10px;
+  border-radius: 50px;
+  display: inline-block;
+  border: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.stopwtach-parent .watch-inerface .controls span::after {
+  font-size: 14px;
+}
+.stopwtach-parent .watch-inerface .controls span i {
+  font-size: 25px;
+}
+.stopwtach-parent .watch-inerface .controls span.active {
+  display: flex;
+}
+.stopwtach-parent .watch-inerface .controls span {
+  display: none;
+}
+.stopwtach-parent .watch-inerface .controls .stop {
+  border-color: rgba(255, 0, 0, 0.5294117647);
+  color: #f00;
+}
+.stopwtach-parent .watch-inerface .controls .stop::after {
+  content: "Stop";
+}
+.stopwtach-parent .watch-inerface .controls .start::after {
+  content: "Start";
+}
+.stopwtach-parent .watch-inerface .controls .reset::after {
+  content: "Reset";
+}
+.stopwtach-parent .watch-inerface .controls .lab::after {
+  content: "Lab";
+}
+.stopwtach-parent .lab-interface {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  overflow-y: scroll;
+  margin: 60px auto 0;
+  border: 1px solid #000;
+  padding: 10px;
+}
+.stopwtach-parent .lab-interface ul {
+  display: flex;
+  flex-flow: column-reverse wrap;
+}
+.stopwtach-parent .lab-interface li {
+  text-align: center;
+  list-style: none;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-around;
+}
+.stopwtach-parent .lab-interface li span {
+  width: 60px;
+  display: inline-block;
+  position: relative;
+  text-align: left;
+}
+.stopwtach-parent .lab-interface li span::after {
+  content: ":";
+  position: absolute;
+  right: 19px;
+}
+.stopwtach-parent .lab-interface li span:last-child::after {
+  content: unset;
+}
